@@ -61,9 +61,9 @@ const styles = {
     },
     links: {
         display: 'flex',
-        gap: '30px',
-        fontWeight: '500',
-        fontSize: '23px',
+        gap: '25px',
+        fontWeight: '450',
+        fontSize: '19px',
         textTransform: 'uppercase',
         letterSpacing: '1px'
     },

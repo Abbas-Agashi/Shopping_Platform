@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+.App {
+    min-width: 1200px; /* Enforce desktop width */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #666;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+input, textarea, select {
+    font-family: inherit;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.btn-primary {
+    background: #000;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #333;
+}

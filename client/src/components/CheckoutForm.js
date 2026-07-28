@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useCart } from '../context/CartContext';
+import { API_BASE_URL } from '../config';
 
 const CheckoutForm = ({ onClose }) => {
     const stripe = useStripe();
@@ -18,7 +19,7 @@ const CheckoutForm = ({ onClose }) => {
 
         try {
             // Create Payment Intent
-            const response = await fetch('http://localhost:5000/api/payment/create-payment-intent', {
+            const response = await fetch(`${API_BASE_URL}/payment/create-payment-intent`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ amount: total }),

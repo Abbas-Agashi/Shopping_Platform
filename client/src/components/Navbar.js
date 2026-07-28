@@ -2,11 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { FaShoppingCart, FaSearch } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = ({ onSearch }) => {
-    const { cartItems } = useCart();
-    const cartCount = cartItems.reduce((acc, item) => acc + item.qty, 0);
-    const name = "C.U.B.E";
+  const navigate = useNavigate();
+  const { cartItems } = useCart();
+  const cartCount = cartItems.reduce((acc, item) => acc + item.qty, 0);
+  const name = "C.U.B.E";
+
+  const handleSearch = (value) => {
+    onSearch(value);
+    if (value.length > 0) {
+      navigate('/shop'); // Auto-navigate to shop when searching
+    }
+  };
 
     return (
         <nav style={styles.nav}>

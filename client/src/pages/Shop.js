@@ -26,10 +26,9 @@ const Shop = ({ searchTerm }) => {
   }, [category]);
 
   // Add this after fetching products
-  const filteredProducts = products.filter((product) => {
-    if (!searchTerm) return true; // If no search, show all
-    return product.name.toLowerCase().includes(searchTerm.toLowerCase());
-  });
+  const filteredProducts = products.filter(product =>
+  product.name.toLowerCase().includes(searchTerm.toLowerCase())
+);
 
   if (loading) return <div style={styles.loading}>Loading products...</div>;
 

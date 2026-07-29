@@ -64,7 +64,7 @@ const styles = {
         zIndex: 1000
     },
     logo: {
-        fontSize: '28px',
+        fontSize: '25px',
         fontWeight: '500',
         letterSpacing: '6px'
     },
